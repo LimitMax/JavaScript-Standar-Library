@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegExp</title>
+  </head>
+  <body>
+    <script>
+      {
+        //RegExp
+        const nama = "Limit Max Max Limit";
+        const regex = /Max/;
+
+        const result = regex.exec(nama);
+        console.info(result);
+
+        const test = regex.test(nama);
+        console.info(test);
+      }
+
+      {
+        //Regex Modifier
+        const name = "Limit\nMax\nTaufiq\nQurohman\nRuki\nLimit\nMax";
+        const regex1 = /Max/g;
+        const regex2 = /Ruki/gi;
+
+        let result;
+        while ((result = regex1.exec(name)) !== null) {
+          console.info(result);
+        }
+
+        while ((result = regex2.exec(name)) !== null) {
+          console.info(result);
+        }
+      }
+    </script>
+  </body>
+</html>

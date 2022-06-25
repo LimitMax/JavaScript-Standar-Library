@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date and Time</title>
+  </head>
+  <body>
+    <script>
+      {
+        //newDate
+        const date1 = new Date();
+
+        console.info(date1);
+
+        //newDate (years,bulan,tanggal)
+        const date2 = new Date(2001, 05, 14);
+
+        //getter & setter Date
+        const get = date2;
+
+        console.info(get.getDate());
+        console.info(get.setDate(15));
+        console.info(date2);
+
+        //newDate (years,bulan,tanggal,jam,menit,daetik) gunakan ? untuk opsional
+        const date3 = new Date(2001, 05, 14, 10, 10, 10);
+
+        console.info(date3);
+
+        //Epoch & Unix Timestamp  = 1 Januari 1997
+        const date4 = new Date(98140501);
+        console.info(date4);
+      }
+
+      {
+        //waktu sekarang
+        const epoch = new Date();
+
+        console.info(epoch.getTime());
+
+        console.info(Date.now());
+      }
+
+      //Parsing Date
+      {
+        const time = Date.parse("2022-01-11T15:24:14");
+
+        console.info(time);
+
+        const date = new Date(time);
+
+        console.info(date);
+      }
+    </script>
+  </body>
+</html>

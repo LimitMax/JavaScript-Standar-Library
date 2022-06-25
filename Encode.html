@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encode</title>
+  </head>
+  <body>
+    <script>
+      {
+        //ENcode & Decode
+        const url = "http://limitMax.com/?name=Limit&Max Full";
+        console.info(url);
+
+        const encoded = encodeURI(url);
+        console.info(encoded);
+
+        const decoded = decodeURI(url);
+        console.info(decoded);
+      }
+
+      {
+        //ENcode & Decode
+        const value = "Limit&Max=Full";
+        const url = "http://limitMax.com/?name=";
+        console.info(url);
+
+        const encoded = encodeURIComponent(url);
+        console.info(url + encoded);
+
+        const decoded = decodeURIComponent(url);
+        console.info(url + decoded);
+      }
+    </script>
+  </body>
+</html>
